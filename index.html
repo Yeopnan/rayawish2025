@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salam Aidilfitri</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        text-align: center;
+        padding: 20px;
+      }
+      .ecard {
+        background: url("https://source.unsplash.com/600x400/?eid") no-repeat
+          center/cover;
+        padding: 50px;
+        border-radius: 10px;
+        max-width: 600px;
+        margin: auto;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        position: relative;
+      }
+      .logo {
+        max-width: 120px;
+        height: auto;
+        display: block;
+        margin: 0 auto 20px auto;
+      }
+      h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        color: aqua;
+      }
+      p {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+        color: blue;
+      }
+      .btn {
+        background-color: #28a745;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ecard">
+      <img src="img/logo pnsb.png" alt="Company Logo" class="logo" />
+      <p>Mengucapkan</p>
+      <h1>Salam Aidilfitri</h1>
+      <p>Maaf Zahir & Batin</p>
+      <p>
+        Semoga Syawal membawa kebahagiaan dan keberkatan kepada anda dan
+        keluarga.
+      </p>
+      <button class="btn" onclick="playAudio()">
+        Klik untuk Dengarkan Lagu Raya 🎶
+      </button>
+      <audio
+        id="laguRaya"
+        src="audio/WhatsApp Audio 2025-03-28 at 17.06.14.mpeg"
+      ></audio>
+    </div>
+
+    <script>
+      function playAudio() {
+        var audio = document.getElementById("laguRaya");
+        if (audio.paused) {
+          audio.play();
+        } else {
+          audio.pause();
+        }
+      }
+    </script>
+  </body>
+</html>
